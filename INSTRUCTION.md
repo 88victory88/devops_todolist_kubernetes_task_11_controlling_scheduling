@@ -11,7 +11,7 @@ kubectl label nodes todoapp-node app=todoapp
 
 3. Deploy the StatefulSet and Deployment:
 ```bash
-kubectl apply -f .infrastructure/mysql/statefulset.yml
+kubectl apply -f .infrastructure/mysql/statefulSet.yml
 kubectl apply -f .infrastructure/app/deployment.yml
 ```
 
@@ -23,8 +23,8 @@ kubectl get pods -n todoapp
 
 5. Check the nodes where the pods are running:
 ```bash
-kubectl describe pod mysql-node -n mysql
-kubectl describe pod todoapp-node -n todoapp
+kubectl describe pod mysql -n mysql
+kubectl describe pod todoapp -n todoapp
 ```
 
 6. Ensure the pods are correctly distributed according to the affinity/anti-affinity rules.
